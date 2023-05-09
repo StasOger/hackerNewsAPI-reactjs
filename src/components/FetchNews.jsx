@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, ReactRouterDOM, Link, Outlet, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router,  Outlet, useNavigate } from "react-router-dom";
 
 
 export default function FetchNews() {

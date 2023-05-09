@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { BrowserRouter as Router, Route, Routes, ReactRouterDOM, Link, Outlet, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router,  Link, Outlet, useNavigate } from "react-router-dom";
 
 
 function Item() {
@@ -60,12 +60,9 @@ function Item() {
   const title = itemGet.title; 
   const url = itemGet.url; 
   const time = itemGet.time; 
-  const kids = itemGet.kids; 
   
   const commentId = comments.id;
   const commentBy = comments.by; 
-  const commentParent = comments.parent; 
-  const commentKids = comments.kids;
   const commentText = comments.text; 
 
   // конвертируем дату из long в date
@@ -135,7 +132,6 @@ function Item() {
 }
 
 export default Item;
-
 
 
 
