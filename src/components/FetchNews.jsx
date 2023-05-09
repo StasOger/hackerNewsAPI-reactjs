@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, ReactRouterDOM, Link, Outlet, useNavigate } from "react-router-dom";
-import Item from "./Item";
+
 
 export default function FetchNews() {
 
@@ -9,12 +9,8 @@ export default function FetchNews() {
   const [stories, setStories] = useState([])
   const [storiess, setStoriess] = useState([])
   const [query, setQuery] = useState("programming")
-  const [isLoading, setIsLoading] = useState(true) // loading state
-  // const useNavigate = ReactRouterDOM.useNavigate;
+  const [isLoading, setIsLoading] = useState(true) 
   const navigate = useNavigate();
-
-  // const useNavigate = ReactRouterDOM.useNavigate;
-  // const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true)
@@ -38,13 +34,9 @@ export default function FetchNews() {
               if (story != null){
                 stories.push(story); 
               }
-              // setStories(story);
-              
           } 
-
           setStoriess(stories);
     }
-
     fetchNews()
     setIsLoading(false)
   }, [query])
@@ -80,11 +72,7 @@ export default function FetchNews() {
                 
 
                 return (
-                  <button
-                        onClick={async event => { navigate(`/Item/${id}`); }}
-                          >
-                     
-                    
+                  <button onClick={async event => { navigate(`/Item/${id}`); }}>
                     <article
                       key={id}
                       className="bg-gray-800 rounded p-3 transition-all duration-150"
